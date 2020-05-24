@@ -5,13 +5,17 @@ html
     meta(charset='utf-8')
     title= title
     link(rel='stylesheet', href='/css/bootstrap.min.css')
-    link(rel='stylesheet', href='/stylesheets/style.css')
   
   body
+    nav(class="navbar navbar-expand-lg navbar-dark bg-primary")
+        a(class="navbar-brand" href="#") Blockstack Interface API RPC
+
     block content
 
 
+    script(type="application/javascript" src='/js/jquery.min.js')
+    script(type="application/javascript" src='/js/popper.min.js')
+    script(type="application/javascript" src='/js/bootstrap.min.js')
+    script(type="application/javascript" src='/js/functions.js')
 
-    link(rel='stylesheet', href='/js/jquery.min.js')
-    link(rel='stylesheet', href='/js/popper.js')
-    link(rel='stylesheet', href='/js/bootstrap.min.js')
+    
