@@ -1,5 +1,150 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    main(class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content")
+    div(class="container")
+        div(class="form-group")
+            select(class="custom-select" id="selectquery" style="font-size: 1.7rem;")
+                option(value="0") POST /v2/transactions
+                option(value="1") GET /v2/accounts/[Principal]
+                option(value="2") POST /v2/map_entry/[Stacks Address]/[Contract Name]/[Map Name]]
+                option(value="3") GET /v2/fees/transfer
+                option(value="4") GET /v2/contracts/interface/[Stacks Address]/[Contract Name]
+                option(value="5") GET /v2/contracts/source/[Stacks Address]/[Contract Name]
+                option(value="6") POST /v2/contracts/call-read/[Stacks Address]/[Contract Name]/[Function Name]
+
+
+
+        
+        div(id="form")
+            div(id="form1")
+                form(action="" method="POST" id="accountsForm")
+                    div(class="form-group")
+                        label(for="server") Server:
+                        input(
+                        type="text"
+                        id="server"
+                        name="server"
+                        class="form-control"
+                        value="localhost"
+                        )
+                    div(class="form-group")
+                        label(for="principal") Principal:
+                        input(
+                            type="text"
+                            id="principal"
+                            name="principal"
+                            class="form-control"
+                        )
+                    button(type="submit" class="btn btn-primary" value="Submit") Send
+            div(id="form2" style="display:none;")
+                form(action="" method="POST" id="map_entryForm")
+                    div(class="form-group")
+                        label(for="server") Server:
+                        input(
+                        type="text"
+                        id="servermap"
+                        name="server"
+                        class="form-control"
+                        value="localhost"
+                        )
+                    div(class="form-group")
+                        label(for="stackaddress") Stack Address:
+                        input(
+                            type="text"
+                            id="stackaddress"
+                            name="stackaddress"
+                            class="form-control"
+                        )
+                    div(class="form-group")
+                        label(for="contractname") Contract Name:
+                        input(
+                            type="text"
+                            id="contractname"
+                            name="contractname"
+                            class="form-control"
+                        )
+                    div(class="form-group")
+                        label(for="mapname") Map Name:
+                        input(
+                            type="text"
+                            id="mapname"
+                            name="mapname"
+                            class="form-control"
+                        )
+                    button(type="submit" class="btn btn-primary" value="Submit") Send
+            div(id="form3" style="display:none;")
+                form(action="" method="POST" id="feesForm")
+                    div(class="form-group")
+                        label(for="server") Server:
+                        input(
+                        type="text"
+                        id="serverfees"
+                        name="server"
+                        class="form-control"
+                        value="localhost"
+                        )
+                    button(type="submit" class="btn btn-primary" value="Submit") Send
+            div(id="form4" style="display:none;")
+                form(action="" method="POST" id="contractinterface")
+                    div(class="form-group")
+                        label(for="server") Server:
+                        input(
+                        type="text"
+                        id="serverinterface"
+                        name="server"
+                        class="form-control"
+                        value="localhost"
+                        )
+                    div(class="form-group")
+                        label(for="stacksaddress") Stacks Address:
+                        input(
+                        type="text"
+                        id="stacksaddress"
+                        name="stacksaddress"
+                        class="form-control"
+                        )
+                    div(class="form-group")
+                        label(for="contractnamecontractinterface") Contract Name:
+                        input(
+                        type="text"
+                        id="contractnamecontractinterface"
+                        name="contractnamecontractinterface"
+                        class="form-control"
+                        )
+                    button(type="submit" class="btn btn-primary" value="Submit") Send
+            div(id="form5" style="display:none;")
+                form(action="" method="POST" id="contractsource")
+                    div(class="form-group")
+                        label(for="serversource") Server:
+                        input(
+                        type="text"
+                        id="serversource"
+                        name="serversource"
+                        class="form-control"
+                        value="localhost"
+                        )
+                    div(class="form-group")
+                        label(for="stacksaddresssource") Stacks Address:
+                        input(
+                        type="text"
+                        id="stacksaddresssource"
+                        name="stacksaddresssource"
+                        class="form-control"
+                        )
+                    div(class="form-group")
+                        label(for="contractnamecontractsource") Contract Name:
+                        input(
+                        type="text"
+                        id="contractnamecontractsource"
+                        name="contractnamecontractsource"
+                        class="form-control"
+                        )
+                    button(type="submit" class="btn btn-primary" value="Submit") Send
+        br
+        br
+        div(id="resultbox")
+            h3 Result
+            div(class="media border p-3")
+                div(id="result") 
+            input(type="button" class="mt-3 btn btn-primary" id="clear" value="Clear")
