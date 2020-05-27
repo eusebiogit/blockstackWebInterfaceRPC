@@ -15,4 +15,4 @@ Then you run it:
 Next load http://localhost:3000/ to enter.
 
 
-![Vamoscarga](https://github.com/eusebiogit/blockstackWebInterfaceRPC/blob/master/public/images/Screenshot111.png)
+![Vamoscarga](https://github.com/eusebiogit/blockstackWebInterfaceRPC/blob/master/public/images/view.png)
