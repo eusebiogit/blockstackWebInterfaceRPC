@@ -2,6 +2,8 @@ blockstackWebInterfaceRPC
 
 To use the web, you need to have NodeJS installed. 
 
+I am doing still some querys.
+
 Then you run it:
 
   $ git clone https://github.com/eusebiogit/blockstackWebInterfaceRPC.git
